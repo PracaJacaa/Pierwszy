@@ -9,12 +9,12 @@ import Harnas from './components/harnasToEUR';
 
 
    const app = (
-       <>
-       <Hello />
-       <Time />
-       <CurencyChange />
-       <Harnas />
-       </>
+       <main>
+        <Hello />
+        <Time />
+        <CurencyChange />
+        <Harnas />
+       </main>
    )
     ReactDOM.render(app, document.getElementById('Root'));
 

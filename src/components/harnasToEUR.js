@@ -14,10 +14,10 @@ class Harnas extends React.Component{
     changeCurency(value,scale){
         switch(scale){
             case "Eur":
-                this.setState({Harnas: value * 0.54 , Eur: value});
+                this.setState({Harnas: value / 0.54 , Eur: value});
                 return;
             case "Harnaś":
-                this.setState({Eur: value / 0.56, Harnas: value});
+                this.setState({Eur: value * 0.54, Harnas: value});
                 return;
         }
     }
@@ -25,7 +25,7 @@ class Harnas extends React.Component{
     render(){
         return<>
         <div id="piwo">
-        <p>Harnaś</p>
+        <p>Harnaś (polish beer)</p>
         <input type="text" value={this.state.Harnas} onChange={(event) => this.changeCurency(event.target.value, "Harnaś") }/>
         <p>Eur</p>
         <input type="text" value={this.state.Eur} onChange={(event) => this.changeCurency(event.target.value, "Eur") }/>

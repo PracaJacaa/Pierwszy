@@ -25,9 +25,9 @@ class CurencyChange extends React.Component{
     render(){
         return<>
         <p>Pln</p>
-        <input type="text" value={this.state.Pln} onChange={(event) => this.changeCurency(event.target.value, "Pln") }/>
+        <input type="number" value={this.state.Pln} onChange={(event) => this.changeCurency(event.target.value, "Pln") }/>
         <p>Eur</p>
-        <input type="text" value={this.state.Eur} onChange={(event) => this.changeCurency(event.target.value, "Eur") }/>
+        <input type="number" value={this.state.Eur} onChange={(event) => this.changeCurency(event.target.value, "Eur") }/>
         </>
     }
 }
