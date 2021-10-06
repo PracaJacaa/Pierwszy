@@ -1,5 +1,6 @@
-import React, { Component } from 'react'
-import ReactDOM from 'react-dom'
+import React, { Component } from 'react';
+import ReactDOM from 'react-dom';
+import CurancyBox from "./changeBox"
 
 
 class CurencyChange extends React.Component{
@@ -9,26 +10,37 @@ class CurencyChange extends React.Component{
             Pln: 0,
             Eur: 0,
         };
+        this.changeCurency = this.changeCurency.bind(this);
+
     }
 
     changeCurency(value,scale){
         switch(scale){
-            case "Eur":
-                this.setState({Pln: value * 4.6009, Eur: value});
-                return;
+         
             case "Pln":
-                this.setState({Eur: value * 0.21735, Pln: value});
+                this.setState({Pln: value * 0.21735, Eur: value});
+                return;
+            case "Eur":
+                this.setState({Eur: value * 4.6009, Pln: value});
                 return;
         }
     }
 
     render(){
-        return<>
-        <p>Pln</p>
-        <input type="number" value={this.state.Pln} onChange={(event) => this.changeCurency(event.target.value, "Pln") }/>
-        <p>Eur</p>
-        <input type="number" value={this.state.Eur} onChange={(event) => this.changeCurency(event.target.value, "Eur") }/>
-        </>
-    }
+        return(
+ <main>
+        <CurancyBox
+         CurancyName="Eur"
+         CurancyValue={this.state.Pln}
+         changeCurency={this.changeCurency}
+        />
+
+        <CurancyBox
+         CurancyName="Pln"
+         CurancyValue={this.state.Eur}
+         changeCurency={this.changeCurency}
+        />
+      </main>
+        )}
 }
 export default CurencyChange;

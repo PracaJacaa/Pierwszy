@@ -7,13 +7,12 @@ import Time from './Time.js';
 import CurencyChange from './components/walutconv';
 import Harnas from './components/harnasToEUR';
 
-
+//        <Hello />
+  //      <Time />
+    //    <Harnas />
    const app = (
        <main>
-        <Hello />
-        <Time />
         <CurencyChange />
-        <Harnas />
        </main>
    )
     ReactDOM.render(app, document.getElementById('Root'));
