@@ -1,1 +1,8 @@
 @import url('simpledotcss/simple.min.css');
+
+#piwo{
+    background-color: green;
+    border: solid black 10px;
+    height: auto;
+    width: auto;
+}
