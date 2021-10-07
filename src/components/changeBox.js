@@ -11,11 +11,11 @@ class CurancyBox extends React.Component {
       <>
         <p>{this.props.CurancyName.toUpperCase()}</p>
         <input
-          type="text"
+          type="number"
           value={this.props.CurancyValue}
           onChange={(event) => {
             this.props.changeCurency(
-              event.target.value,
+              parseFloat(event.target.value),
               this.props.CurancyName
             );
           }}

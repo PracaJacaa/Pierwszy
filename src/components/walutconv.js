@@ -10,9 +10,12 @@ class CurencyChange extends React.Component{
             Pln: 0,
             Eur: 0,
         };
+        
         this.changeCurency = this.changeCurency.bind(this);
-
+        const nr_text = parseFloat(this.state.CurancyValue);
     }
+
+
 
     changeCurency(value,scale){
         switch(scale){
